@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: eda2697a703fd2352627bd725d047c2b7d913b4e3fd7fba6848ba6f18cb055a7
+-- hash: 330f92de688a4ee9544a49daf869c93d80b48ec7ecc4cc2448ef1291c95a4528
 
 name:           blas-test
 version:        0.1.0.0
@@ -25,13 +25,13 @@ source-repository head
   type: git
   location: https://github.com/minoki/blas-test
 
-library
-  exposed-modules:
-      Lib
+executable blas-test-blashs
+  main-is: Main.hs
   other-modules:
       Paths_blas_test
   hs-source-dirs:
-      src
+      blas-hs
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       array
     , base >=4.7 && <5
@@ -52,39 +52,7 @@ executable blas-test-cuda
       array
     , base >=4.7 && <5
     , blas-hs
-    , blas-test
     , cublas
     , cuda
-    , vector
-  default-language: Haskell2010
-
-executable blas-test-exe
-  main-is: Main.hs
-  other-modules:
-      Paths_blas_test
-  hs-source-dirs:
-      app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      array
-    , base >=4.7 && <5
-    , blas-hs
-    , blas-test
-    , vector
-  default-language: Haskell2010
-
-test-suite blas-test-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_blas_test
-  hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      array
-    , base >=4.7 && <5
-    , blas-hs
-    , blas-test
     , vector
   default-language: Haskell2010
