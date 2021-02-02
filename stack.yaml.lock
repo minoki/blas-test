@@ -11,6 +11,24 @@ packages:
       sha256: 1b6f60ca79778cdc44156e9ee7749eee5e4f3fda8b4dbce01cbeb2b2064c5434
   original:
     hackage: blas-hs-0.1.1.0@sha256:d4d0077495ea05712a355051a1ef74d9aa3d9ec8f607d3de1cfbdcc06ed81a95,3965
+- completed:
+    name: cuda
+    version: 0.10.2.0
+    git: https://github.com/vmchale/cuda.git
+    pantry-tree:
+      size: 11075
+      sha256: c308ce631a0879f24fef4df566483b31abbf8adaf93ff9eba57dce2af5c566c7
+    commit: 1b7678efefdef640236ba4e680ae5b7db4ed7261
+  original:
+    git: https://github.com/vmchale/cuda.git
+    commit: 1b7678efefdef640236ba4e680ae5b7db4ed7261
+- completed:
+    hackage: cublas-0.6.0.0@sha256:f25a633f067f31b6df0aff751710b1a4d79d39c5ed717462879e0ece46cf294b,2363
+    pantry-tree:
+      size: 939
+      sha256: 16421174c274fa6275f26f3ac9e931c8099ad43a8a8a0d558d7a4df5d3c13e67
+  original:
+    hackage: cublas-0.6.0.0@sha256:f25a633f067f31b6df0aff751710b1a4d79d39c5ed717462879e0ece46cf294b,2363
 snapshots:
 - completed:
     size: 563100

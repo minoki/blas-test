@@ -44,6 +44,11 @@ packages:
 
 extra-deps:
 - blas-hs-0.1.1.0@sha256:d4d0077495ea05712a355051a1ef74d9aa3d9ec8f607d3de1cfbdcc06ed81a95,3965
+# - cuda-0.10.2.0@sha256:29912a2273840bbad934b404c7bd27633a1b9b5449c57ae8118bc35e7dcfeb74,5656
+# https://github.com/tmcdonell/cuda/pull/64
+- git: https://github.com/vmchale/cuda.git
+  commit: 1b7678efefdef640236ba4e680ae5b7db4ed7261
+- cublas-0.6.0.0@sha256:f25a633f067f31b6df0aff751710b1a4d79d39c5ed717462879e0ece46cf294b,2363
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
